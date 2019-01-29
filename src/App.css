@@ -31,6 +31,6 @@
   }
 }
 
-#song-list {
-  text-align: center;
+table#song-list {
+  margin: 0 auto;
 }
