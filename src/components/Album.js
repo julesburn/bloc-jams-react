@@ -10,11 +10,48 @@ class Album extends Component {
     });
 
     this.state = {
-      album: album
+      album: album,
+      currentSong: album.songs[0],
+      isPlaying: false
     };
+
+    this.audioElement = document.createElement('audio');
+    this.audioElement.src = album.songs[0].audioSrc;
+  }
+
+  play() {
+    this.audioElement.play();
+    this.setState({ isPlaying: true });
+  }
+
+  pause() {
+    this.audioElement.pause();
+    this.setState({ isPlaying: false });
+  }
+
+  setSong(song) {
+    this.audioElement.src = song.audioSrc;
+    this.setState({ currentSong: song });
+  }
+
+  handleSongClick(song) {
+    const isSameSong = this.state.currentSong === song;
+    if (this.state.isPlaying && isSameSong) {
+      this.pause();
+    } else {
+      if (!isSameSong) {this.setSong(song); }
+      this.play();
+    }
   }
 
   render() {
+    const songs = this.state.album.songs.map( (song, index) =>
+      <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
+        <td>{index+1}</td>
+        <td>{song.title}</td>
+        <td>{Math.round(song.duration)} seconds</td>
+      </tr>
+    );
     return (
       <section className="album">
         <section id="album-info">
@@ -26,12 +63,18 @@ class Album extends Component {
           </div>
         </section>
         <table id="song-list">
+          <tr>
+            <th>Track</th>
+            <th>Title</th>
+            <th>Length</th>
+          </tr>
           <colgroup>
             <col id="song-number-column" />
             <col id="song-title-column" />
             <col id="song-duration-column" />
           </colgroup>
           <tbody>
+            {songs}
           </tbody>
         </table>
       </section>
