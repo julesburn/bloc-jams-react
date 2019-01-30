@@ -15,6 +15,7 @@ class Album extends Component {
       currentSong: album.songs[0],
       currentTime: 0,
       duration: album.songs[0].duration,
+      currentVolume: 0.5,
       isPlaying: false,
       hovered: false
     };
@@ -30,16 +31,21 @@ class Album extends Component {
       },
       durationchange: e => {
         this.setState({ duration: this.audioElement.duration});
+      },
+      volumechange: e => {
+        this.setState({ currentVolume: this.audioElement.volume})
       }
     };
     this.audioElement.addEventListener('timeupdate', this.eventListeners.timeupdate);
     this.audioElement.addEventListener('durationchange', this.eventListeners.durationchange);
+    this.audioElement.addEventListener('volumechange', this.eventListeners.volumechange);
   }
 
   componentWillUnmount() {
     this.audioElement.src = null;
     this.audioElement.removeEventListener('timeupdate', this.eventListeners.timeupdate);
     this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);
+    this.audioElement.removeEventListener('volumechange', this.eventListeners.volumechange);
   }
 
   play() {
@@ -92,11 +98,36 @@ class Album extends Component {
     this.play();
   }
 
+  handleVolumeChange(e) {
+    const newVolume = e.target.value;
+    this.audioElement.volume = newVolume;
+    this.setState({ currentVolume: newVolume});
+  }
+
   handleTimeChange(e) {
     const newTime = this.audioElement.duration * e.target.value;
     this.audioElement.currentTime = newTime;
     this.setState({ currentTime: newTime});
   }
+
+  formatTime(totalSeconds) {
+    let displayTime = "";
+    if(isNaN(totalSeconds)){
+      return "-:--";
+    }
+    else{
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      const roundedSeconds = Math.round(seconds)
+      if (roundedSeconds < 10) {
+        return (minutes + ":0" + roundedSeconds);
+      }
+      else {
+        return (minutes + ":" + roundedSeconds);
+      }
+    }
+    };
+
 
   displayIcon(song) {
     let className="";{
@@ -146,7 +177,7 @@ class Album extends Component {
                 </button>
               </td>
               <td>{song.title}</td>
-              <td>{Math.round(song.duration)} seconds</td>
+              <td>{this.formatTime(song.duration)}</td>
             </tr>
           )
         }
@@ -161,6 +192,8 @@ class Album extends Component {
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={(e) => this.handleTimeChange(e)}
+          handleVolumeChange={(e) => this.handleVolumeChange(e)}
+          formatTime={(e)=> this.formatTime(e)}
         />
       </section>
     );
