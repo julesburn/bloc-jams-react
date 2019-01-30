@@ -131,14 +131,17 @@ class Album extends Component {
 
   displayIcon(song) {
     let className="";{
-      if (song === this.state.hovered) {
-        if (this.state.isPlaying && song === this.state.currentSong){
+      if (this.state.isPlaying && song === this.state.currentSong){
         return className = "icon ion-md-pause";
       }
-      return className= "icon ion-md-play";
+      if (song === this.state.hovered && this.state.isPlaying && song === this.state.currentSong) {
+          return className = "icon ion-md-pause";
+      }
+      if (song === this.state.hovered){
+        return className= "icon ion-md-play";
+      }
     }
   }
-}
 
   render() {
     return (
