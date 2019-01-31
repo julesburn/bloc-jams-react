@@ -129,17 +129,18 @@ class Album extends Component {
     };
 
 
-  displayIcon(song) {
-    let className="";{
-      if (this.state.isPlaying && song === this.state.currentSong){
-        return className = "icon ion-md-pause";
-      }
-      if (song === this.state.hovered && this.state.isPlaying && song === this.state.currentSong) {
-          return className = "icon ion-md-pause";
-      }
-      if (song === this.state.hovered){
-        return className= "icon ion-md-play";
-      }
+  displayIcon(song, index) {
+    if (this.state.isPlaying && song === this.state.currentSong){
+      return <ion-icon name="pause" />;
+    }
+    else if (song === this.state.hovered && this.state.isPlaying && song === this.state.currentSong) {
+      return <ion-icon name="pause"/>;
+    }
+    else if (song === this.state.hovered){
+      return <ion-icon name="play" />;
+    }
+    else{
+      return index+1;
     }
   }
 
@@ -173,7 +174,7 @@ class Album extends Component {
             onMouseLeave={() => this.mouseLeave(song)} >
               <td>
                 <button>
-                <span className={this.displayIcon(song)}>{index+1}</span>
+                <span>{this.displayIcon(song, index)}</span>
                 </button>
               </td>
               <td>{song.title}</td>
