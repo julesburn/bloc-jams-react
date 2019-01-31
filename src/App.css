@@ -19,4 +19,36 @@
 
 table#song-list {
   margin: 0 auto;
+  border: #F5F5F5 2px solid;
+}
+
+body{
+  background-image: url("https://i.imgur.com/ctiN588.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #F5F5F5;
+  text-shadow: 2px 2px 1px #41827e;
+}
+
+div.point {
+  margin-top: 50px;
+  width: 400px;
+  height: 200px;
+}
+
+#logo-pic {
+  opacity: 0.7;
+}
+
+#title-point {
+  font-size: x-large;
+}
+
+div.centered {
+  font-size: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

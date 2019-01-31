@@ -11,8 +11,8 @@ class App extends Component {
       <div className="App">
         <header>
           <nav>
-            <Link to='/' class="btn btn-info">Landing</Link>
-            <Link to='/library'>Library</Link>
+            <Link to='/' class="btn btn-info float-left m-3">Home</Link>
+            <Link to='/library' class="btn btn-info float-right m-3">Collection</Link>
           </nav>
           <h1>My Music Player</h1>
         </header>
