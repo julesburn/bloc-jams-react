@@ -37,18 +37,20 @@ div.point {
   height: 200px;
 }
 
-#logo-pic {
-  opacity: 0.7;
+img.logo-pic {
+  opacity: 0.8;
+
 }
 
-#title-point {
-  font-size: x-large;
+#front-face {
+  font-size: 65px;
+  font-weight: bold;
+  opacity:
 }
 
 div.centered {
-  font-size: 45px;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
