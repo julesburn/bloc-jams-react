@@ -4,7 +4,7 @@ const Landing = () => (
     <section className="landing">
     <div className="title-point">
       <div class="container">
-        <img className="logo-pic" src="https://i.imgur.com/lGivBCr.jpg" alt="girl with iPod dancing" />
+        <img className="logo-pic bg-white" src="https://i.imgur.com/lGivBCr.jpg" alt="girl with iPod dancing" />
         <div class="centered"><h1 id="front-face">Turn up the music!</h1>
         </div>
       </div>

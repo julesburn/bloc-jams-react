@@ -10,10 +10,17 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <nav>
-            <div class = "btn-group-justified btn-group-lg">
-              <button type="button" class="btn btn-lg btn-round my-primary"><Link to='/'className='landing-link'>Home</Link></button>
-              <button type="button" class="btn btn-lg btn-round my-primary"><Link to='/library'className="landing-link">Library</Link></button>
+          <nav className="navbar navbar-expand-sm navbar-light bg-my-primary">
+            <div className="container">
+            <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item"><Link to='/'className="nav-link my-primary">Home</Link></li>
+                  <li className="nav-item"><Link to='/library'className="nav-link my-primary">Library</Link></li>
+                </ul>
+              </div>
            </div>
           </nav>
           <h1>Bloc Jams</h1>
