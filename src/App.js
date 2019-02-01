@@ -11,10 +11,12 @@ class App extends Component {
       <div className="App">
         <header>
           <nav>
-            <Link to='/' class="btn btn-info float-left m-3">Home</Link>
-            <Link to='/library' class="btn btn-info float-right m-3">Collection</Link>
+            <div class = "btn-group-justified btn-group-lg">
+              <button type="button" class="btn btn-lg btn-round my-primary"><Link to='/'className='landing-link'>Home</Link></button>
+              <button type="button" class="btn btn-lg btn-round my-primary"><Link to='/library'className="landing-link">Library</Link></button>
+           </div>
           </nav>
-          <h1>My Music Player</h1>
+          <h1>Bloc Jams</h1>
         </header>
         <main>
           <Route exact path="/" component={Landing} />

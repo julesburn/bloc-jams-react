@@ -20,8 +20,9 @@
 table#song-list {
   margin: 0 auto;
   border: #F5F5F5 2px solid;
+  padding: 10px;
 }
-
+/*Body and larger individual element styles*/
 body{
   background-image: url("https://i.imgur.com/ctiN588.jpg");
   background-repeat: no-repeat;
@@ -37,20 +38,55 @@ div.point {
   height: 200px;
 }
 
-img.logo-pic {
-  opacity: 0.8;
+.logo-pic {
+  opacity: 0.6;
+  box-shadow: 2px 2px 1px #41827e;
 
 }
 
 #front-face {
   font-size: 65px;
   font-weight: bold;
-  opacity:
 }
 
 div.centered {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+/*Button and Link Styles*/
+button {
+  background-color: #41827e;
+  width: 100px;
+  height: 50px;
+  box-shadow: 0px 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #F5F5F5;
+  margin: 10px;
+  display: inline-grid;
+}
+
+.landing-link {
+  text-decoration: none;
+  color: #F5F5F5;
+}
+
+.landing-link:hover{
+  text-decoration: none;
+  color: #F5F5F5;
+}
+
+button:hover{
+  background-color: #346b67;
+
+}
+/* CSS for customized primary color in Bootstrap*/
+.my-primary{
+  color: #F5F5F5;
+  background-color: #41827e;
+}
+
+.my-primary:focus, .my-primary:hover{
+  color: #F5F5F5;
+  background-color: #41827e;
 }
