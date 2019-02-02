@@ -24,11 +24,11 @@ table#song-list {
 }
 /*Body and larger individual element styles*/
 body{
-  background-image: url("https://i.imgur.com/ctiN588.jpg");
+  background-image: url("https://i.imgur.com/6tO2RTB.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  color: #F5F5F5;
+  color: #272828;
   text-shadow: 2px 2px 1px #41827e;
 }
 
@@ -38,74 +38,67 @@ div.point {
   height: 200px;
 }
 
-.logo-pic {
-  opacity: 0.6;
-  box-shadow: 2px 2px 1px #41827e;
+/* CSS for Logo Pic and Attached Text */
 
+img {
+  border-radius: 16px;
 }
 
-#front-face {
-  font-size: 65px;
-  font-weight: bold;
+.thumbnail {
+    border-radius: 50%;
+    position: relative;
+    opacity: .75;
+    box-shadow: 2px 2px 1px #41827e;
+    margin: 0 auto;
 }
 
-div.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.caption {
+    color: #F5F5F5;
+    text-shadow: 2px 2px 1px #41827e;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    margin: auto;
 }
+
 /*Button and Link Styles*/
-button {
-  background-color: #41827e;
-  width: 100px;
-  height: 50px;
-  box-shadow: 0px 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  color: #F5F5F5;
-  margin: 10px;
-  display: inline-grid;
-}
 
-.landing-link {
-  text-decoration: none;
-  color: #F5F5F5;
-}
-
-.landing-link:hover{
-  text-decoration: none;
-  color: #F5F5F5;
-}
-
-button:hover{
-  background-color: #346b67;
-
-}
 /* CSS for customized primary color in Bootstrap*/
 .my-primary{
   color: #F5F5F5;
-  background-color: #41827e;
+  background-color: #63cccc;
 }
 
 .my-primary:focus, .my-primary:hover{
   color: #F5F5F5;
-  background-color: #41827e;
+  background-color: #63cccc;
 }
 
 /* Library page CSS for album info */
 
+.library {
+  margin-top: 100px;
+}
+
+.album-item {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 img.cover-pic {
   width: 150px;
   height: 150px;
-  display: inline-grid;
+  display: inline;
 }
 
 .album-info {
   text-decoration: none;
-  color: #F5F5F5;
-  display: inline-block;
+  color:  #272828;
+  margin: 0 auto;
 }
 
 .album-info:hover {
   text-decoration: none;
-  color: #F5F5F5;
+  color:  #272828;
 }

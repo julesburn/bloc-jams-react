@@ -1,16 +1,20 @@
 import React from 'react';
 
 const Landing = () => (
-    <section className="landing">
+  <section className="landing">
     <div className="title-point">
-      <div class="container">
-        <img className="logo-pic bg-white" src="https://i.imgur.com/lGivBCr.jpg" alt="girl with iPod dancing" />
-        <div class="centered"><h1 id="front-face">Turn up the music!</h1>
+      <div className="container">
+        <div className="row" id="box-search">
+          <div className="thumbnail text-center">
+          <img src="https://i.imgur.com/lGivBCr.jpg" alt="girl with iPod dancing" className="img-responsive" />
+            <div className="caption">
+              <h1>Turn up the music!</h1>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-      <section className="selling-points">
         <div className="point float-left d-inline-block">
           <p> <ion-icon name="musical-note" size="large" /> </p>
           <h4 className="point-title">Choose your music</h4>
@@ -26,7 +30,6 @@ const Landing = () => (
           <h4 className="point-title ">Mobile enabled</h4>
           <p className="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
         </div>
-      </section>
     </section>
 );
 
