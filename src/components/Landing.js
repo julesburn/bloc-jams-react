@@ -6,7 +6,7 @@ const Landing = () => (
       <div className="container">
         <div className="row" id="box-search">
           <div className="thumbnail text-center">
-          <img src="https://i.imgur.com/lGivBCr.jpg" alt="girl with iPod dancing" className="img-responsive" />
+          <img class="landing-image" src="https://i.imgur.com/lGivBCr.jpg" alt="girl with iPod dancing" className="img-responsive" />
             <div className="caption">
               <h1>Turn up the music!</h1>
             </div>
