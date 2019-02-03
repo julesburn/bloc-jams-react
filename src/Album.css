@@ -1,0 +1,24 @@
+/* CSS for Album Page */
+/* Styling for Album pages */
+
+img#album-cover-art {
+  width: 400px;
+  height: 400px;
+  float: left;
+  display: inline;
+  margin: 20px;
+  margin-left: 20px;
+
+}
+
+.album-details {
+  float: left;
+  display: inline;
+  margin: 20px;
+  margin-top: 100px;
+  font-size: 45px;
+}
+
+tr.song {
+  border-bottom: 2px solid #272828;
+}

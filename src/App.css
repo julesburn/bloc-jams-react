@@ -19,7 +19,6 @@
 
 table#song-list {
   margin: 0 auto;
-  border: #F5F5F5 2px solid;
   padding: 10px;
   width: 1000px;
   margin-bottom: 50px;
@@ -69,8 +68,9 @@ img {
 button {
   color: #41827e;
   background-color: #63cccc;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 
 }
 
@@ -112,11 +112,4 @@ img.cover-pic {
 .album-info:hover {
   text-decoration: none;
   color:  #272828;
-}
-
-/* Styling for Album pages */
-
-img#album-cover-art {
-  width: 100px;
-  height: 100px;
 }

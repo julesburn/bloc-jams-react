@@ -15,7 +15,7 @@ class PlayerBar extends Component {
             <span className="ion-md-skip-forward" onClick={this.props.handleNextClick}></span>
           </button>
         </section>
-        <section id="time-control">
+        <section className="time-control">
           <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
           <input
           type="range"
@@ -28,7 +28,7 @@ class PlayerBar extends Component {
           />
           <div className="total-time">{this.props.formatTime(this.props.duration)}</div>
         </section>
-        <section id="volume-control">
+        <section className="volume-control">
           <div className="icon ion-md-volume-low">{this.props.currentVolume}</div>
           <input
           type="range"
